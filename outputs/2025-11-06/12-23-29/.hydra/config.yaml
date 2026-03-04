@@ -1,0 +1,36 @@
+model:
+  name: vit_b16
+  init:
+    _target_: timm.models.factory.create_model
+    model_name: vit_base_patch16_224
+    pretrained: true
+    pretrained_cfg: orig_in21k_ft_in1k
+method:
+  name: tis
+  init:
+    _target_: tis.TIS
+    n_masks: 1024
+    batch_size: 128
+    tokens_ratio: 0.5
+    verbose: false
+transform:
+  _target_: torchvision.transforms.Compose
+  _args_:
+  - - _target_: torchvision.transforms.ToTensor
+    - _target_: torchvision.transforms.Resize
+      size: 256
+    - _target_: torchvision.transforms.CenterCrop
+      size: 224
+    - _target_: torchvision.transforms.Normalize
+      mean:
+      - 0.485
+      - 0.456
+      - 0.406
+      std:
+      - 0.229
+      - 0.224
+      - 0.225
+seed: 12345
+input_file: img.JPEG
+output_file: output.jpg
+class_idx: null

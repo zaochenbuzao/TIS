@@ -1,0 +1,24 @@
+tis
+ViT-CX
+TAM
+Cheferl
+Chefer2
+Att. Rollout
+BTH
+BTT
+RISE
+IntegratedGrad
+SmoothGrad
+已经出结果的有：
+tis，attrollout，rise
+还未跑通
+
+ViT-CX
+TAM
+Cheferl
+Chefer2
+BTH
+BTT
+RISE
+IntegratedGrad
+SmoothGrad

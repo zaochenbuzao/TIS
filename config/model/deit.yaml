@@ -1,0 +1,5 @@
+name: deit_b16
+init:
+  _target_: timm.models.factory.create_model
+  model_name: deit_base_patch16_224
+  pretrained: true

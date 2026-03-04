@@ -1,0 +1,5 @@
+salloc -p gpu-a40 -N1 -n24 --gres=gpu:1
+squeue -u $USER查看当前资源
+jupyter nbconvert --to script input.ipynb
+现在已经适配的环境有：使用TTT环境来跑generate.py
+目前正在装配的环境，使用STS环境来跑exanple_tis.py

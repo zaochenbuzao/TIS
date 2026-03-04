@@ -1,0 +1,11 @@
+defaults:
+  - model: vit
+  - method: tis
+  - dataset: ilsvrc2012_subset
+  - transform: ilsvrc2012_albumentations
+  - optional method_model: ${method}_${model}
+  - _self_
+
+seed: 12345
+output_npz: npz/${model.name}_${method.name}.npz
+no_target: false
