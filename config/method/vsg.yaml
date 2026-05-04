@@ -1,0 +1,8 @@
+name: vsg
+init:
+  _target_: comparison_methods.vsg_wrapper.VSGWrapper
+  model_type: vit
+  device: cuda
+  token_ratio: 0.5
+  masks_layers: 4
+  starting_layer: 0
