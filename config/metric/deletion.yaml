@@ -4,4 +4,4 @@ init:
   _target_: metrics.Deletion
   n_steps: 224
   batch_size: ${metric_batch_size}
-  baseline: mean
+  baseline: black
